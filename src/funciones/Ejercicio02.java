@@ -13,13 +13,16 @@ import javax.swing.JOptionPane;
  * @author Usuario
  */
 public class Ejercicio02 {
-    public int eje2 (int y, int z)
-    {  
-        long r = 0;
+    public static void main(String[] args) 
+    {                        
+        int z;
+        long y, r;
+        y=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor del entero Y"));
+        z=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor del entero Z"));
         if (y<=0 || y>255)
         {
             r=-1;
-           
+            JOptionPane.showMessageDialog(null,"Resultado "+r);
         }
         else
         {
@@ -36,12 +39,9 @@ public class Ejercicio02 {
                 if(j==(z-1))
                 {
                     r=arreglo[j];
-                    
+                    JOptionPane.showMessageDialog(null,"Resultado "+r);
                 }
             }
         }
-                  
-            return (int) r;
-
     }
 }
