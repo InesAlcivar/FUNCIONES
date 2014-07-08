@@ -13,35 +13,34 @@ import javax.swing.JOptionPane;
  * @author Usuario
  */
 public class Ejercicio03 {
-    public static void main(String[] args) 
-    {        
-        int y,z,r;
-        double proc,c=1,c1=1;
-        y=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor del entero Y"));
-        z=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor del entero Z"));
-        double a=(double)y;
-        if (y<=0 || y>255)
+   public int ej3(int x,int y){
+        int[] f1=new int[y];
+        int result = 0;
+        if (x<=0 ||y<=0 || x>255||y>255 )
         {
-            r=-1;
-            JOptionPane.showMessageDialog(null,"Resultado "+r);
+            result= -1;
         }
         else
         {
-            double[] arreglo=new double[z];
-            arreglo[0]=a;              
-            for (int j = 1;j<arreglo.length; j++) 
-            {                
-                c=c+1;
-               proc=y*(1/c);
-               arreglo[j]=proc;           
+             
+             f1[0]=x;
+             int n1;
+            
+            for (int i = 1;i<f1.length; i++) 
+            {
+               n1=x/(i+1);
+               f1[i]=n1;           
             }
-            for (int j = 0; j < arreglo.length; j++) 
+            for (int i = 0; i < f1.length; i++) 
             { 
-              if(j==(y-1))
-                {                    
-                    JOptionPane.showMessageDialog(null,"Resultado "+arreglo[j]);
+              if(i==(y-1))
+                {
+                    result= (f1[i]);
+                   
                 }  
+              
             }
         }
+       return (int) result ;
     }
 }

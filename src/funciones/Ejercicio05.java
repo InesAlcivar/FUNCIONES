@@ -7,67 +7,48 @@
 package funciones;
 
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author Usuario
  */
 public class Ejercicio05 {
-     public static void main(String[] args)
-    {        
-        int v=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el rango del Vector"));
-        int[] arreglo=new int[v];
-        int c=0;
-        for (int j = 0; j < arreglo.length; j++) 
-        {           
-            int num=Integer.parseInt(JOptionPane.showInputDialog("Ingrese Número"));
-            arreglo[j]=num;
-        } 
-        System.out.println("Arreglo Ingresado es: "); 
-        for (int j = 0; j < arreglo.length; j++) 
-        {            
-            System.out.print(arreglo[j]+" ");
+     public int [] ej5(int arreglo[]){
+        int c=0;long result = 0;
+        
+        for (int i = 0; i < arreglo.length; i++) {
+            int valor=Integer.parseInt(("Ingrese el valor número "+(i+1)+" del vector"));
+
+            arreglo[i]=valor;
         }
-        System.out.println("");
-         int j, k, aux;
-         for(j = 0; j < arreglo.length-1; j++)
-         {
-            for(k = 0; k < arreglo.length-j-1; k++)
-            {
-                if(arreglo[k+1]<arreglo[k])
-                {
-                    aux=arreglo[k+1];
-                     arreglo[k+1]=arreglo[k];
-                    arreglo[k]=aux;
-                } 
-            }
-        }  
-        System.out.println("Arreglo Ordenado"); 
-        for ( j = 0; j < arreglo.length; j++) 
-        {
-            System.out.print(arreglo[j]+" ");
+         int i, j, vectorAux;
+         for(i=0;i<arreglo.length-1;i++)
+              for(j=0;j<arreglo.length-i-1;j++)
+                   if(arreglo[j+1]<arreglo[j]){
+                      vectorAux=arreglo[j+1];
+                      arreglo[j+1]=arreglo[j];
+                      arreglo[j]=vectorAux;
+                   } 
+         System.out.println("Vector con numeros ingresados \n");
+         for ( i = 0; i < arreglo.length; i++) {
+             System.out.println( arreglo[i]) ; 
         }
-        System.out.println("\nArreglo Sin Numeros Repetidos");
-        int a1;
-        for ( j = 0; j < arreglo.length; j++) 
-        {
-            if (j==0) 
-            {
-                System.out.print(arreglo[j]+" ");
-            }
-            else
-            {
-                a1=j-1;
-                aux=arreglo[j];
-                if (aux==arreglo[a1]) 
-                {
+         System.out.println(" \n El vector sin numeros repetidos \n" );
+         int a1;
+         for ( i = 0; i < arreglo.length; i++) {
+             if (i==0) {
+                 System.out.println(arreglo[i]);
+             }
+             else
+             {
+                 a1=i-1;
+                 vectorAux=arreglo[i];
+             if (vectorAux==arreglo[a1]) {
                  
-                }
-                else
-                    {
-                        System.out.print(arreglo[j]+" ");
-                    }
-            }
-        }System.out.print("\n ");
-    }
+             }else{
+                 System.out.println(arreglo[i]);
+             }
+             }
+        }
+               return  arreglo;
 }
+     }
