@@ -6,6 +6,9 @@
 
 package funciones;
 
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -17,6 +20,22 @@ public class FUNCIONES {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Ejerci1();
+        
     }
     
+    
+    
+    
+    public static void Ejerci1(){
+    Ejercicio01 eje1=new Ejercicio01();
+        int x=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese Valor X"));
+        int y=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese Valor Y"));
+    JOptionPane.showMessageDialog(null, eje1.ej1(x, y));
+        
+    
+    
+    
+    }
 }

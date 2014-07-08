@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
  * @author Ines
  */
 public class Ejercicio01 {
-     public static void main(String[] args) 
+     public int ej1(int x,int y) 
     {        
-        int y=0, z=0, a=7, b=6, r=0, m;
+        int  a=7, b=6, r=0, m;
         int[] arreglo01=new int[128];
         int[] arreglo02=new int[127];
         int[] arreglo03=new int[255];
@@ -44,9 +44,8 @@ public class Ejercicio01 {
                 a=a+1;
             }            
         }
-        y=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor del entero Y"));
-        z=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el valor del entero Z"));
-        if (y<=0 || y>255 || z<=0 || z>255)
+
+        if (y<=0 || y>255 || y<=0 || y>255)
         {
             r=-1;
         }
@@ -60,7 +59,7 @@ public class Ejercicio01 {
                 }
                 else
                 {
-                    if (z==(j+1))
+                    if (y==(j+1))
                     {
                         b=arreglo03[j];
                     }                    
@@ -68,6 +67,7 @@ public class Ejercicio01 {
             }
             r=a+b;
         }
-        JOptionPane.showMessageDialog(null, r);     
+        return r;
+//        JOptionPane.showMessageDialog(null, r);     
     }
 }
