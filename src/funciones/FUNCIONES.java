@@ -23,7 +23,7 @@ public class FUNCIONES {
     public static void main(String[] args) {
         // TODO code application logic here
         
-//        Ejerci1();
+        Ejerci1();
 //        Ejerci2();
 //        Ejerci3();
 //        Ejerci4();
